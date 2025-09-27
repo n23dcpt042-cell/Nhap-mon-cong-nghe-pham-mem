@@ -1,15 +1,13 @@
-# 🛠️ Software Engineering Project – [Tên dự án]
+# 🛠️ Software Engineering Project – Cổng truyền thông số chuỗi cafe
 
 ## 📌 Giới thiệu
 Dự án này được phát triển trong môn **Nhập môn Công nghệ Phần mềm**.  
 Mục tiêu là áp dụng quy trình phát triển phần mềm, từ **phân tích yêu cầu, thiết kế, lập trình, kiểm thử và triển khai**.  
 
 ## 👥 Thành viên nhóm
-- Họ tên 1 – Vai trò (Leader, Developer, Tester, …)
-- Họ tên 2 – Vai trò
-- Họ tên 3 – Vai trò
-- Họ tên 4 – Vai trò  
-
+- Bùi Kim Vân Anh - N23DCPT002
+- Nguyễn Thị Kiều Anh - N23DCPT003
+- Ro Phi Ni - N23DCPT042
 ## 🎯 Use Case chính
 - Quản lý người dùng
 - Quản lý sản phẩm/dịch vụ
