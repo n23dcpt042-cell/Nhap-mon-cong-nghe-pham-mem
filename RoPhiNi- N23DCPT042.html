@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title> Tinh </title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 24px;
+      background: #f7f9fc;
+      color: #222;
+    }
+    .calc {
+      display: inline-block;
+      background: #fff;
+      padding: 18px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .calc-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    input[type="text"], select {
+      padding: 8px 10px;
+      font-size: 16px;
+      border: 1px solid #ccd6df;
+      border-radius: 4px;
+      width: 120px;
+    }
+    input[readonly] {
+      background: #f1f5f8;
+    }
+    .btn-eq {
+      padding: 8px 12px;
+      font-size: 16px;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      background: #0b76ef;
+      color: #fff;
+    }
+    .error {
+      color: #b00020;
+      font-size: 14px;
+      min-height: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1> Calculator </h1>
+  
+
+  <div class="calc" role="region" aria-label="Máy tính">
+    <div class="calc-row">
+      <input id="a" type="text" inputmode="decimal" aria-label="Số a" >
+      
+      <select id="op" aria-label="Chọn phép toán">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+        <option value="^">a^b</option>
+      </select>
+
+      <input id="b" type="text" inputmode="decimal" aria-label="Số b" >
+
+      <button id="equal" class="btn-eq" aria-label="Tính bằng">=</button>
+
+      <input id="result" type="text" readonly aria-label="Kết quả" >
+    </div>
+
+    <div class="error" id="error" aria-live="polite"></div>
+  </div>
+
+  <script>
+  (function () {
+    const elA = document.getElementById('a');
+    const elB = document.getElementById('b');
+    const elOp = document.getElementById('op');
+    const btnEq = document.getElementById('equal');
+    const elResult = document.getElementById('result');
+    const elError = document.getElementById('error');
+
+    function validateInputs() {
+      elError.textContent = '';
+      const rawA = elA.value.trim();
+      const rawB = elB.value.trim();
+
+      if (rawA === '') return { ok: false, message: 'Vui lòng nhập số thứ nhất.' };
+      if (rawB === '') return { ok: false, message: 'Vui lòng nhập số thứ hai.' };
+
+      const a = Number(rawA.replace(',', '.'));
+      const b = Number(rawB.replace(',', '.'));
+
+      if (!isFinite(a)) return { ok: false, message: 'Số thứ nhất không hợp lệ.' };
+      if (!isFinite(b)) return { ok: false, message: 'Số thứ hai không hợp lệ.' };
+
+      return { ok: true, a: a, b: b };
+    }
+
+    function compute() {
+      const v = validateInputs();
+      if (!v.ok) {
+        elResult.value = '';
+        elError.textContent = v.message;
+        return;
+      }
+
+      const a = v.a;
+      const b = v.b;
+      const op = elOp.value;
+      let res;
+
+      if (op === '+') {
+        res = a + b;
+      } else if (op === '-') {
+        res = a - b;
+      } else if (op === '*') {
+        res = a * b;
+      } else if (op === '/') {
+        if (b === 0) {
+          elResult.value = '';
+          elError.textContent = 'Lỗi: không thể chia cho 0.';
+          return;
+        }
+        res = a / b;
+      } else if (op === '^') {
+        res = Math.pow(a, b);
+        if (!isFinite(res) || Number.isNaN(res)) {
+          elResult.value = '';
+          elError.textContent = 'Kết quả không hợp lệ.';
+          return;
+        }
+      } else {
+        elResult.value = '';
+        elError.textContent = 'Phép toán không hợp lệ.';
+        return;
+      }
+
+      if (Number.isInteger(res)) {
+        elResult.value = res.toString();
+      } else {
+        elResult.value = parseFloat(res.toPrecision(12)).toString();
+      }
+      elError.textContent = '';
+    }
+
+    btnEq.addEventListener('click', function (e) {
+      e.preventDefault();
+      compute();
+    });
+
+    elB.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        compute();
+      }
+    });
+
+    [elA, elB, elOp].forEach(el => {
+      el.addEventListener('input', () => {
+        elError.textContent = '';
+      });
+    });
+
+    window.addEventListener('load', () => {
+      elA.focus();
+    });
+  })();
+  </script>
+</body>
+</html>
