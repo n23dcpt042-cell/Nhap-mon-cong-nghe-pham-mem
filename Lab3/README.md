@@ -20,14 +20,6 @@ Form `login.html` gồm các thành phần:
 - 3 nút **Social login** (Facebook, Twitter, Google)
 
 ---
-## ❓ Cách chạy
-
-```text
-## 👤 Tài khoản mẫu để test
-Username: sv1@ptit.edu.vn
-Password: P@ssw0rd
-
----
 
 ## 📄 Các test case
 1. Đăng nhập thành công
@@ -36,6 +28,15 @@ Password: P@ssw0rd
 4. Link Forgot password
 5. Link SIGN UP
 6. Nút social login (Facebook, Twitter, Google)
+
+---
+
+## ❓ Cách chạy
+
+```text
+## 👤 Tài khoản mẫu để test
+Username: sv1@ptit.edu.vn
+Password: P@ssw0rd
 
 ---
 
