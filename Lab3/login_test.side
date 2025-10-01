@@ -28,17 +28,28 @@
     },
     {
       "id": "tc03",
+      "name": "Sai username",
+      "commands": [
+        { "command": "open", "target": "/login.html", "value": "" },
+        { "command": "type", "target": "id=username", "value": "wronguser@ptit.edu.vn" },
+        { "command": "type", "target": "id=password", "value": "P@ssw0rd" },
+        { "command": "click", "target": "id=btnLogin", "value": "" },
+        { "command": "assertText", "target": "id=msg-error", "value": "Invalid credentials." }
+      ]
+    },
+    {
+      "id": "tc04",
       "name": "Trống Username",
       "commands": [
         { "command": "open", "target": "/login.html", "value": "" },
-        { "command": "type", "target": "id=password", "value": "P@ssw0rd" },
         { "command": "type", "target": "id=username", "value": "" },
+        { "command": "type", "target": "id=password", "value": "P@ssw0rd" },
         { "command": "click", "target": "id=btnLogin", "value": "" },
         { "command": "assertText", "target": "id=msg-error", "value": "Please fill all required fields." }
       ]
     },
     {
-      "id": "tc04",
+      "id": "tc05",
       "name": "Trống Password",
       "commands": [
         { "command": "open", "target": "/login.html", "value": "" },
@@ -49,7 +60,7 @@
       ]
     },
     {
-      "id": "tc05",
+      "id": "tc06",
       "name": "Forgot password link",
       "commands": [
         { "command": "open", "target": "/login.html", "value": "" },
@@ -58,7 +69,7 @@
       ]
     },
     {
-      "id": "tc06",
+      "id": "tc07",
       "name": "Sign up link",
       "commands": [
         { "command": "open", "target": "/login.html", "value": "" },
@@ -67,7 +78,7 @@
       ]
     },
     {
-      "id": "tc07",
+      "id": "tc08",
       "name": "Social login buttons",
       "commands": [
         { "command": "open", "target": "/login.html", "value": "" },
@@ -84,7 +95,16 @@
       "persistSession": false,
       "parallel": false,
       "timeout": 300,
-      "tests": ["tc01", "tc02", "tc03", "tc04", "tc05", "tc06", "tc07"]
+      "tests": [
+        "tc01",
+        "tc02",
+        "tc03",
+        "tc04",
+        "tc05",
+        "tc06",
+        "tc07",
+        "tc08"
+      ]
     }
   ],
   "urls": ["http://127.0.0.1:5500/login.html"]
