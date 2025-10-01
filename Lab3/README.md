@@ -40,13 +40,13 @@ Password: P@ssw0rd
 
 ---
 
-### Chạy bằng Selenium IDE
+## Chạy bằng Selenium IDE
 1. Cài extension **Selenium IDE** trên Chrome/Firefox.
 2. Mở IDE → `File > Open Project` → chọn file `login_test.side`.
 3. Chạy toàn bộ suite hoặc từng test case.
 4. Xem kết quả pass/fail trong log.
 
-### Export code (tùy chọn)
+## Export code (tùy chọn)
 Từ Selenium IDE có thể `Export` sang Python/JS rồi chạy bằng Selenium WebDriver.
 
 ## Kết quả minh họa
