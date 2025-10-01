@@ -47,7 +47,7 @@ Username: sv1@ptit.edu.vn
 Password: P@ssw0rd
 
 ---
-## 🚀 Cách chạy trên VSCode Live Server
+##  Cách chạy trên VSCode Live Server
 
 1. Cài extension **Live Server** trong VSCode.
 2. Chuột phải vào file `login.html` → chọn **Open with Live Server**.
