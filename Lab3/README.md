@@ -47,6 +47,14 @@ Username: sv1@ptit.edu.vn
 Password: P@ssw0rd
 
 ---
+## 🚀 Cách chạy trên VSCode Live Server
+
+1. Cài extension **Live Server** trong VSCode.
+2. Chuột phải vào file `login.html` → chọn **Open with Live Server**.
+3. Trình duyệt sẽ mở đường dẫn, ví dụ: http://127.0.0.1:5500/login.html
+4. Sử dụng đường dẫn này làm base URL khi chạy Selenium IDE.
+
+---
 
 ## Chạy bằng Selenium IDE
 1. Cài extension **Selenium IDE** trên Chrome/Firefox.
