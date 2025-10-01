@@ -20,9 +20,10 @@ Form `login.html` gồm các thành phần:
 - 3 nút **Social login** (Facebook, Twitter, Google)
 
 ---
+## ❓ Cách chạy
 
-## 👤 Tài khoản mẫu để test
 ```text
+## 👤 Tài khoản mẫu để test
 Username: sv1@ptit.edu.vn
 Password: P@ssw0rd
 
@@ -36,7 +37,8 @@ Password: P@ssw0rd
 5. Link SIGN UP
 6. Nút social login (Facebook, Twitter, Google)
 
-## ❓ Cách chạy
+---
+
 ### Chạy bằng Selenium IDE
 1. Cài extension **Selenium IDE** trên Chrome/Firefox.
 2. Mở IDE → `File > Open Project` → chọn file `login_test.side`.
