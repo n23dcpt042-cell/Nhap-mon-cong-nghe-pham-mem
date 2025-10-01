@@ -1,31 +1,42 @@
-# Selenium Test - Login Form
+# 🚀 Selenium IDE Test – Login Form
 
-## Thông tin
-- Môn học: Nhập Môn Công Nghệ Phần Mềm
-- Sinh viên:
+## 📘 Thông tin
+- **Môn học**: [Nhập Môn Công Nghệ Phần Mềm]  
+- **Sinh viên**:
   + Bùi Kim Vân Anh - N23DCPT002
   + Nguyễn Thị Kiều Anh - N23DCPT003
-  + Ro Phi Ni - N23DCPT042
-- Bài tập: Lab 03- Testing software (login form) 
+  + Ro Phi Ni - N23DCPT042 
+- **Bài tập**: Lab 03- Testing software (login form)  
 
-## Nội dung
-Form `login.html` gồm:
-- Ô nhập Username, Password
-- Nút LOGIN
-- Link Forgot password?
-- Link SIGN UP
-- Nút social login (Facebook, Twitter, Google)
+---
 
-Các test case:
+## 🖥️ Giao diện form login
+Form `login.html` gồm các thành phần:
+- Trường nhập **Username**
+- Trường nhập **Password**
+- Nút **LOGIN**
+- Link **Forgot password?**
+- Link **SIGN UP**
+- 3 nút **Social login** (Facebook, Twitter, Google)
+
+---
+
+## 👤 Tài khoản mẫu để test
+```text
+Username: sv1@ptit.edu.vn
+Password: P@ssw0rd
+
+---
+
+## 📄 Các test case
 1. Đăng nhập thành công
 2. Sai thông tin đăng nhập
-3. Bỏ trống Username
-4. Bỏ trống Password
-5. Link Forgot password
-6. Link SIGN UP
-7. Nút social login (Facebook, Twitter, Google)
+3. Bỏ trống Username/Bỏ trống Password
+4. Link Forgot password
+5. Link SIGN UP
+6. Nút social login (Facebook, Twitter, Google)
 
-## Cách chạy
+## ❓ Cách chạy
 ### Chạy bằng Selenium IDE
 1. Cài extension **Selenium IDE** trên Chrome/Firefox.
 2. Mở IDE → `File > Open Project` → chọn file `login_test.side`.
