@@ -19,6 +19,8 @@ Form `login.html` gồm các thành phần:
 - Link **SIGN UP**
 - 3 nút **Social login** (Facebook, Twitter, Google)
 
+![Giao diện](login.png)
+
 ---
 
 ## 📄 Các test case
