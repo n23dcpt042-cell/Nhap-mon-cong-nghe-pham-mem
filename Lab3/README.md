@@ -31,6 +31,12 @@ Form `login.html` gồm các thành phần:
 
 ---
 
+## 📊 Sơ đồ Use Case
+
+![Sơ đồ Use Case](usecase.png)
+
+---
+
 ## ❓ Cách chạy
 
 ```text
