@@ -1,23 +1,48 @@
 @startuml
+title Check-in / Check-out sequence
+
 actor Receptionist
+
 participant "FrontDesk App" as App
 participant "Reservation DB" as DB
 participant "Housekeeping" as HK
 
+== Lookup reservation ==
 Receptionist -> App: lookupReservation(code)
+activate App
 App -> DB: getReservation(code)
+activate DB
 DB --> App: reservationData
+deactivate DB
+App --> Receptionist: showReservation(reservationData)
+deactivate App
+
+== Check-in ==
 Receptionist -> App: checkIn(resvId, actualRoom)
-App -> DB: updateReservationStatus(resvId, 'checked_in', room)
-DB --> App: ok
-App -> HK: notify(room, 'occupied')
-App -> Receptionist: checkInSuccess
--- Check-out
+activate App
+App -> DB: updateReservationStatus(resvId, checked_in, room)
+activate DB
+DB --> App: OK
+deactivate DB
+App -> HK: notify(room, occupied)
+App --> Receptionist: checkInSuccess
+deactivate App
+
+== Check-out ==
 Receptionist -> App: checkOut(resvId)
+activate App
 App -> DB: calculateCharges(resvId)
+activate DB
 DB --> App: totalAmount
+deactivate DB
 Receptionist -> App: acceptPayment(amount)
-App -> DB: updateReservationStatus(resvId, 'checked_out')
-App -> HK: notify(room, 'cleaning_needed')
-App -> Receptionist: checkOutComplete
+App -> DB: recordPayment(resvId, amount)
+activate DB
+DB --> App: paymentRecorded
+deactivate DB
+App -> DB: updateReservationStatus(resvId, checked_out)
+App -> HK: notify(room, cleaning_needed)
+App --> Receptionist: checkOutComplete
+deactivate App
+
 @enduml
