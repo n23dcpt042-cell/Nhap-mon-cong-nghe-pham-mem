@@ -28,8 +28,3 @@ Mục tiêu là áp dụng quy trình phát triển phần mềm, từ **phân t
 - Quản lý phiên bản: Git + GitHub
 - Mô hình phát triển: Agile – Scrum  
 
-## 🚀 Cài đặt & chạy thử
-1. Clone repo:
-   ```bash
-   git clone https://github.com/vancv43/[ten-repo].git
-   cd [ten-repo]
