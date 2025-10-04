@@ -14,3 +14,8 @@ Artifacts for Lab 02 (Phân tích yêu cầu & Thiết kế Use Case)
 
 ## PlantUML
 Generate images:
+plantuml diagrams/*.puml
+
+## Git workflow
+- Branch từ `main` → feature branches
+- Commit messages: `HOTEL-<ISSUE> <SHORT>: <message>`
