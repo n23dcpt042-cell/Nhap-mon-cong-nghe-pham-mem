@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Guest
+actor Receptionist
+actor Manager
+actor Housekeeping
+actor "Payment Gateway" as PG
+
+Guest --> (Search rooms)
+Guest --> (View room details)
+Guest --> (Book room)
+(Book room) .> (Make payment) : includes
+(Book room) --> PG : use
+Receptionist --> (Check-in)
+Receptionist --> (Check-out)
+Manager --> (Manage rooms & prices)
+Manager --> (View revenue report)
+Housekeeping --> (Update room status)
+
+@enduml
