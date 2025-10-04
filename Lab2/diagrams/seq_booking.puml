@@ -1,0 +1,19 @@
+@startuml
+actor Guest
+participant "Website" as Web
+participant "Booking Service" as BS
+participant "Payment Gateway" as PG
+participant "Email Service" as Email
+
+Guest -> Web: Select room + dates
+Web -> BS: holdRoom(roomId, guestInfo, holdUntil)
+BS -> Web: holdConfirmed
+Web -> Guest: show payment form
+Guest -> Web: submitPayment(card)
+Web -> PG: charge(card, amount)
+PG --> Web: success(transactionId)
+Web -> BS: confirmBooking(guest, room, txn=transactionId)
+BS -> Email: sendConfirmation(guest, reservation)
+BS --> Web: reservationConfirmed(resvId)
+Web -> Guest: show confirmation (resvId)
+@enduml
