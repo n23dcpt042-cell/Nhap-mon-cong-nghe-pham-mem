@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form onsubmit="return validateForm()">
+      <label>Username</label>
+      <input type="text" id="username" placeholder="Enter Username" required>
+      
+      <label>Password</label>
+      <input type="password" id="password" placeholder="Enter Password" required>
+      
+      <div class="options">
+        <label><input type="checkbox" id="remember"> Remember me</label>
+      </div>
+      
+      <button type="submit">Login</button>
+      <button type="reset">Cancel</button>
+    </form>
+    <p id="error" class="error"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
