@@ -1,0 +1,23 @@
+@startuml
+actor Receptionist
+participant "FrontDesk App" as App
+participant "Reservation DB" as DB
+participant "Housekeeping" as HK
+
+Receptionist -> App: lookupReservation(code)
+App -> DB: getReservation(code)
+DB --> App: reservationData
+Receptionist -> App: checkIn(resvId, actualRoom)
+App -> DB: updateReservationStatus(resvId, 'checked_in', room)
+DB --> App: ok
+App -> HK: notify(room, 'occupied')
+App -> Receptionist: checkInSuccess
+-- Check-out
+Receptionist -> App: checkOut(resvId)
+App -> DB: calculateCharges(resvId)
+DB --> App: totalAmount
+Receptionist -> App: acceptPayment(amount)
+App -> DB: updateReservationStatus(resvId, 'checked_out')
+App -> HK: notify(room, 'cleaning_needed')
+App -> Receptionist: checkOutComplete
+@enduml
