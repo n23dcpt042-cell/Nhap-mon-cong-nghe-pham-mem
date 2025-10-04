@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lab04 - Form Đăng nhập</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lab04 - Login Form</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="login-container">
@@ -12,21 +12,19 @@
     <form id="loginForm">
       <div class="form-group">
         <label for="username">Tên đăng nhập</label>
-        <input type="text" id="username" placeholder="Nhập username..." required>
+        <input type="text" id="username" placeholder="Nhập username..." required />
       </div>
-
       <div class="form-group">
         <label for="password">Mật khẩu</label>
         <div class="password-wrapper">
-          <input type="password" id="password" placeholder="Nhập password..." required>
-          <span id="togglePassword" class="toggle">&#128065;</span>
+          <input type="password" id="password" placeholder="Nhập password..." required />
+          <span id="togglePassword">👁️</span>
         </div>
       </div>
 
-      <div class="form-options">
-        <label>
-          <input type="checkbox" id="remember"> Ghi nhớ đăng nhập
-        </label>
+      <div class="remember">
+        <input type="checkbox" id="remember" />
+        <label for="remember">Ghi nhớ đăng nhập</label>
       </div>
 
       <div class="button-group">
