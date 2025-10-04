@@ -1,94 +1,106 @@
-/* Nền gradient */
+/* Nền gradient nhẹ và căn giữa form */
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #74b9ff, #a29bfe);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  height: 100vh;
 }
 
 /* Hộp đăng nhập */
 .login-container {
-  background: #fff;
+  background: white;
   padding: 30px 40px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  width: 320px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  width: 350px;
   text-align: center;
 }
 
 h2 {
+  color: #2d3436;
   margin-bottom: 20px;
-  color: #333;
 }
 
-/* Ô input */
+/* Form */
 .form-group {
-  margin-bottom: 15px;
   text-align: left;
+  margin-bottom: 15px;
 }
 
-label {
+.form-group label {
   display: block;
+  font-weight: bold;
   margin-bottom: 5px;
-  color: #444;
 }
 
 input[type="text"],
 input[type="password"] {
   width: 100%;
   padding: 10px;
+  border-radius: 6px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
 }
 
-/* Toggle hiện mật khẩu */
+/* Hiển thị/ẩn mật khẩu */
 .password-wrapper {
   position: relative;
 }
 
-#togglePassword {
+.toggle {
   position: absolute;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  border: none;
-  background: none;
   cursor: pointer;
-  font-size: 16px;
+  user-select: none;
+  color: #636e72;
 }
 
-/* Checkbox remember */
-.remember {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+/* Checkbox Remember me */
+.form-options {
+  text-align: left;
+  margin: 10px 0;
   font-size: 14px;
 }
 
-/* Nút đăng nhập */
-button[type="submit"] {
-  width: 100%;
-  background: #66a6ff;
-  color: white;
-  border: none;
+/* Nút */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
   padding: 10px;
-  border-radius: 8px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 15px;
+  font-weight: bold;
   transition: 0.3s;
 }
 
-button[type="submit"]:hover {
-  background: #5591f0;
+button[type="submit"] {
+  background-color: #0984e3;
+  color: white;
+}
+
+#cancelBtn {
+  background-color: #d63031;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
 }
 
 /* Thông báo */
 #message {
   margin-top: 10px;
-  color: red;
-  font-weight: 500;
+  font-weight: bold;
 }
