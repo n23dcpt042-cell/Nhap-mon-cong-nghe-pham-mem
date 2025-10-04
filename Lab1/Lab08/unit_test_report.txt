@@ -1,0 +1,10 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-8.4.2
+collected 4 items
+
+test_withdraw_unit.py::test_verify_pin_correct PASSED
+test_withdraw_unit.py::test_verify_pin_wrong PASSED
+test_withdraw_unit.py::test_withdraw_success PASSED
+test_withdraw_unit.py::test_withdraw_insufficient PASSED
+
+============================== 4 passed in 0.35s ==============================

@@ -1,0 +1,104 @@
+{
+  "id": "atm-login-test-suite",
+  "version": "2.0",
+  "name": "ATM_Login_Test",
+  "url": "http://127.0.0.1:5500/login_form.html",
+  "tests": [
+    {
+      "id": "login-success",
+      "name": "Login_True",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/login_form.html"
+        },
+        {
+          "command": "type",
+          "target": "id=card_no",
+          "value": "1111222233334444"
+        },
+        {
+          "command": "type",
+          "target": "id=pin",
+          "value": "1234"
+        },
+        {
+          "command": "click",
+          "target": "id=loginBtn"
+        },
+        {
+          "command": "assertText",
+          "target": "id=message",
+          "value": "Login success"
+        }
+      ]
+    },
+    {
+      "id": "login-wrong-pin",
+      "name": "Login_WrongPIN",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/login_form.html"
+        },
+        {
+          "command": "type",
+          "target": "id=card_no",
+          "value": "1111222233334444"
+        },
+        {
+          "command": "type",
+          "target": "id=pin",
+          "value": "0000"
+        },
+        {
+          "command": "click",
+          "target": "id=loginBtn"
+        },
+        {
+          "command": "assertText",
+          "target": "id=message",
+          "value": "Wrong PIN"
+        }
+      ]
+    },
+    {
+      "id": "login-empty",
+      "name": "Login_Empty",
+      "commands": [
+        {
+          "command": "open",
+          "target": "/login_form.html"
+        },
+        {
+          "command": "execute script",
+          "target": "document.getElementById('card_no').value=''; document.getElementById('pin').value='';",
+          "value": ""
+        },
+        {
+          "command": "click",
+          "target": "id=loginBtn"
+        },
+        {
+          "command": "assertText",
+          "target": "id=message",
+          "value": "Empty input"
+        }
+      ]
+    }
+  ],
+  "suites": [
+    {
+      "id": "atm-login-suite",
+      "name": "ATM_Login_Suite",
+      "persistSession": false,
+      "parallel": false,
+      "timeout": 30000,
+      "tests": [
+        "login-success",
+        "login-wrong-pin",
+        "login-empty"
+      ]
+    }
+  ]
+}
