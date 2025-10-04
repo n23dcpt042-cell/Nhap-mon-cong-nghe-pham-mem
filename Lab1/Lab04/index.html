@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Login Demo</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="login-container">
+    <form id="loginForm" novalidate>
+      <h1>Đăng nhập</h1>
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text" required>
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" required minlength="4">
+
+      <label><input id="remember" type="checkbox"> Remember me</label>
+
+      <div class="buttons">
+        <button id="loginBtn" type="submit">Login</button>
+        <button id="cancelBtn" type="button">Cancel</button>
+      </div>
+      <p id="error" aria-live="polite"></p>
+    </form>
+  </main>
+<script src="js/script.js"></script>
+</body>
+</html>
+cs
