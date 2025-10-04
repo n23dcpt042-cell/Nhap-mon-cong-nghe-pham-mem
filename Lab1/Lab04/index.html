@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lab04 - Login Form</title>
-  <!-- đường dẫn CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,15 +14,25 @@
         <label for="username">Tên đăng nhập</label>
         <input type="text" id="username" placeholder="Nhập username..." required>
       </div>
+
       <div class="form-group">
         <label for="password">Mật khẩu</label>
-        <input type="password" id="password" placeholder="Nhập password..." required>
+        <div class="password-wrapper">
+          <input type="password" id="password" placeholder="Nhập password..." required>
+          <button type="button" id="togglePassword">👁</button>
+        </div>
       </div>
+
+      <div class="form-group remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Ghi nhớ đăng nhập</label>
+      </div>
+
       <button type="submit">Đăng nhập</button>
       <p id="message"></p>
     </form>
   </div>
-  <!-- đường dẫn JS -->
+
   <script src="script.js"></script>
 </body>
 </html>
