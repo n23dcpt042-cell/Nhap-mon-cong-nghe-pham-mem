@@ -10,7 +10,7 @@ Mục tiêu là áp dụng quy trình phát triển phần mềm, từ **phân t
 - Ro Phi Ni - N23DCPT042
 ## 🎯 Use Case chính
 <p align="center">
-  <img src="https://drive.google.com/file/d/1egZcZTxN4dN5YojBlJ1udnwGmvY4a5bF/view?usp=drive_link" width="600"/>
+  <img src="https://docs.google.com/document/d/1bPYZbm17khbp38hbIl9vqlGQAW6rYQ0o_tvg5AtDjrk/edit?hl=vi&tab=t.0" width="600"/>
 </p>
 - Quản lý người dùng
 - Quản lý sản phẩm/dịch vụ
