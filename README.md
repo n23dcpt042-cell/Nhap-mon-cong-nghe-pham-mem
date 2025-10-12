@@ -9,15 +9,16 @@ Mục tiêu là áp dụng quy trình phát triển phần mềm, từ **phân t
 - Nguyễn Thị Kiều Anh - N23DCPT003
 - Ro Phi Ni - N23DCPT042
 ## 🎯 Use Case chính
-<p align="center">
-  <img src="Lab1/Lab02/use case (2).png" width="600"/>
-</p>
+
+
 - Quản lý người dùng
 - Quản lý sản phẩm/dịch vụ
 - Xử lý giao dịch
 - Báo cáo & thống kê  
 
-(Sơ đồ use case có thể chèn hình ảnh vào đây)
+<p align="center">
+  <img src="Lab1/Lab02/use case (2).png" width="600"/>
+</p>
 
 ## 📐 Thiết kế hệ thống
 - **Use Case Diagram**: ![Use Case](./docs/usecase.png)
