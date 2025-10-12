@@ -21,9 +21,9 @@ Mục tiêu là áp dụng quy trình phát triển phần mềm, từ **phân t
 </p>
 
 ## 📐 Thiết kế hệ thống
-- **Use Case Diagram**: ![Use Case](./docs/usecase.png)
-- **Sequence Diagram**: ![Sequence](./docs/sequence.png)
-- **ERD (Entity Relationship Diagram)**: ![ERD](./docs/erd.png)
+- **Use Case Diagram**: [Use Case]
+- **Sequence Diagram**: [Sequence]
+- **ERD (Entity Relationship Diagram)**: [ERD]
 
 ## 💻 Công nghệ sử dụng
 - Ngôn ngữ: Java / Python / JavaScript / PHP
