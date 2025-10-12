@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>ATM Login Test</title>
+</head>
+<body>
+<h2>ATM Login</h2>
+<form id="loginForm">
+  Card No: <input type="text" id="card_no"><br><br>
+  PIN: <input type="password" id="pin"><br><br>
+  <button type="button" id="loginBtn" onclick="login()">Login</button>
+</form>
+<p id="message"></p>
+
+<script>
+function login() {
+  const card = document.getElementById("card_no").value;
+  const pin = document.getElementById("pin").value;
+  if (!card || !pin) {
+    document.getElementById("message").innerText = "Empty input";
+  } else if (card === "1111222233334444" && pin === "1234") {
+    document.getElementById("message").innerText = "Login success";
+  } else {
+    document.getElementById("message").innerText = "Wrong PIN";
+  }
+}
+</script>
+</body>
+</html>
